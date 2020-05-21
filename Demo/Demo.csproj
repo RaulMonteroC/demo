@@ -18,6 +18,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />
+    <Folder Include="UI\" />
+    <Folder Include="UI\Controls\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Fonts\JosefinSans-Regular.ttf" />

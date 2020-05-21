@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design" 
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:controls="clr-namespace:Demo.UI.Controls"
              mc:Ignorable="d" x:Class="Demo.MainPage"
              BackgroundColor="#262525">
     
@@ -13,18 +13,12 @@
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
-    <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="Auto" />
-        <ColumnDefinition Width="Auto" />
-    </Grid.ColumnDefinitions>
 
-    <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-           Source="header" Aspect="AspectFit" VerticalOptions="Start"/>
+    <!--Header-->
+    <controls:HeaderImageSlider Grid.Row="0"/>
 
-    <Image Grid.Row="0" Grid.Column="1" Source="MenuIcon"
-           VerticalOptions="End" Margin="0,0,0,20"/>
-
-    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="20">
+    <!--Column 1-->
+    <Grid Grid.Row="1"  Margin="20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="3*" />
@@ -37,79 +31,36 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Text="Alphine Steakhouse" FontFamily="JosefinSans"
+            <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Alphine Steakhouse" FontFamily="JosefinSans"
                    FontSize="Title" TextColor="White"/>
 
-            <Label Grid.Row="1" Text="Meats • Deli • Sandwiches" FontFamily="JosefinSansLight"
+            <Label Grid.Row="1" Grid.ColumnSpan="2" Text="Meats • Deli • Sandwiches" FontFamily="JosefinSansLight"
                    FontSize="Subtitle" TextColor="White"/>
 
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="6*" />
-                    <ColumnDefinition Width="4*" />
-                </Grid.ColumnDefinitions>
+            <controls:LocationPill Grid.Row="2" />
 
-                <yummy:PancakeView BackgroundColor="#C9262B" CornerRadius="30" HeightRequest="30" Margin="0,20">
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="WhiteLocationIcon" Margin="10,0,0,0" VerticalOptions="Center"/>
-                        <Label Text="1.5 Miles" FontFamily="JosefinSansDarker" TextColor="White" Margin="0"
-                               VerticalOptions="Center" HorizontalOptions="Center"/>
-                    </StackLayout>
-                </yummy:PancakeView>
-            </Grid>
-
-            <StackLayout Grid.Row="3" Spacing="0">
+            <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Spacing="0">
                 <Label Text="4520 S. Ramiami Trail" FontFamily="JosefinSansLight" FontSize="Medium" TextColor="White"/>
                 <Label Text="Sarasota, FL 34231" FontFamily="JosefinSansLight" FontSize="Medium" TextColor="White"/>
             </StackLayout>
         </Grid>
 
-
+        <!--Column 2-->
         <Grid Grid.Column="1" HorizontalOptions="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-
-                <Label Grid.Row="0" Grid.Column="0" Text="Sat" TextColor="#C9262B" FontSize="Caption" />
-                <Label Grid.Row="0" Grid.Column="1" Text="9AM-9:30PM" TextColor="#C9262B" FontSize="Caption" HorizontalOptions="End" />
-
-                <Label Grid.Row="1" Grid.Column="0" Text="Sun" TextColor="White" FontSize="Caption"/>
-                <Label Grid.Row="1" Grid.Column="1" Text="Closed" TextColor="White" FontSize="Caption" HorizontalOptions="End" />
-
-                <Label Grid.Row="2" Grid.Column="0" Text="Mon" TextColor="White" FontSize="Caption" />
-                <Label Grid.Row="2" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontSize="Caption" HorizontalOptions="End" />
-
-                <Label Grid.Row="3" Grid.Column="0" Text="Tue" TextColor="White" FontSize="Caption" />
-                <Label Grid.Row="3" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontSize="Caption" HorizontalOptions="End" />
-
-                <Label Grid.Row="4" Grid.Column="0" Text="Wed" TextColor="White" FontSize="Caption" />
-                <Label Grid.Row="4" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontSize="Caption" HorizontalOptions="End" />
-
-                <Label Grid.Row="5" Grid.Column="0" Text="Thu" TextColor="White" FontSize="Caption" />
-                <Label Grid.Row="5" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontSize="Caption" HorizontalOptions="End" />
-
-                <Label Grid.Row="6" Grid.Column="0" Text="Fri" TextColor="White" FontSize="Caption" />
-                <Label Grid.Row="6" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontSize="Caption" HorizontalOptions="End" />
-            </Grid>
+            <controls:Schedule Grid.Row="0"/>
 
             <Image Grid.Row="1" Source="AlpineLogo" Margin="0,10" />
+
         </Grid>
         
     </Grid>
