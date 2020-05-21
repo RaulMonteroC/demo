@@ -4,10 +4,12 @@
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="Demo.UI.Controls.LocationPill">
 
-    <yummy:PancakeView BackgroundColor="#C9262B" CornerRadius="30" HeightRequest="30" Margin="0,20">
+    <yummy:PancakeView BackgroundColor="#C9262B" CornerRadius="30" HeightRequest="30">
         <StackLayout Orientation="Horizontal">
-            <Image Source="WhiteLocationIcon" Margin="10,0,0,0" VerticalOptions="Center"/>
-            <Label Text="1.5 Miles" FontFamily="JosefinSansDarker" TextColor="White" Margin="0"
+
+            <Image Source="WhiteLocationIcon" Margin="10,0,0,0" VerticalOptions="Center" Aspect="AspectFit"/>
+
+            <Label x:Name="DistanceLabel" Text="0 Miles" FontFamily="JosefinSansDarker" TextColor="White" Margin="0"
                     VerticalOptions="Center" HorizontalOptions="Center"/>
         </StackLayout>
     </yummy:PancakeView>

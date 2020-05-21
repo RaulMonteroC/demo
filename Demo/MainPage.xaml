@@ -17,14 +17,18 @@
     <!--Header-->
     <controls:HeaderImageSlider Grid.Row="0"/>
 
-    <!--Column 1-->
-    <Grid Grid.Row="1"  Margin="20">
+    <!--Content-->
+    <Grid Grid.Row="1" Margin="10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0">
+        <!--Column 1-->
+        <Grid Grid.Column="0" ColumnSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -42,7 +46,7 @@
             <Label Grid.Row="1" Grid.ColumnSpan="2" Text="Meats • Deli • Sandwiches" FontFamily="JosefinSansLight"
                    FontSize="Subtitle" TextColor="White"/>
 
-            <controls:LocationPill Grid.Row="2" />
+            <controls:LocationPill Grid.Row="2" Distance="1.5 Miles" Margin="0,15"/>
 
             <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Spacing="0">
                 <Label Text="4520 S. Ramiami Trail" FontFamily="JosefinSansLight" FontSize="Medium" TextColor="White"/>
@@ -51,7 +55,7 @@
         </Grid>
 
         <!--Column 2-->
-        <Grid Grid.Column="1" HorizontalOptions="Center">
+        <Grid Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="0,8,0,0" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
