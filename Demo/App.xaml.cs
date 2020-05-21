@@ -1,28 +1,27 @@
 ﻿using System;
+using Demo.Framework.Keys;
+using Prism.Ioc;
+using Prism.Unity;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Demo
 {
-    public partial class App : Application
+    public partial class App : PrismApplication
     {
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
         }
-
-        protected override void OnStart()
+        
+        protected override void OnInitialized()
         {
+            NavigationService.NavigateAsync(PageKeys.MainPage);
         }
-
-        protected override void OnSleep()
+        
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-        }
-
-        protected override void OnResume()
-        {
+            containerRegistry.RegisterForNavigation<MainPage>();
         }
     }
 }

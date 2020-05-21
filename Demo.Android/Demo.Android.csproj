@@ -54,8 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Prism.Unity.Forms" Version="7.2.0.1422" />
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms.PancakeView">
+      <Version>1.4.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -84,6 +87,26 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\MenuIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\MenuIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\MenuIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\MenuIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\MenuIcon.png" />        
+    <AndroidResource Include="Resources\drawable-mdpi\WhiteLocationIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\WhiteLocationIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\WhiteLocationIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\WhiteLocationIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\WhiteLocationIcon.png" /> 
+    <AndroidResource Include="Resources\drawable-mdpi\AlpineLogo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\AlpineLogo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\AlpineLogo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\AlpineLogo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\AlpineLogo.png" />            
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

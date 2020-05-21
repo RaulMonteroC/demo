@@ -21,13 +21,31 @@ namespace Demo.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            TransparentStatusBar();
             LoadApplication(new App());
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        private void TransparentStatusBar()
+        {
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.Kitkat)
+            {
+                // for covering the full screen in android..
+                Window.SetFlags(WindowManagerFlags.LayoutNoLimits, WindowManagerFlags.LayoutNoLimits);
+
+                // clear FLAG_TRANSLUCENT_STATUS flag:
+                Window.ClearFlags(WindowManagerFlags.TranslucentStatus);
+
+                Window.SetStatusBarColor(Android.Graphics.Color.Transparent);
+
+            }
+
         }
     }
 }
