@@ -1,5 +1,6 @@
 ﻿using System;
 using Demo.Framework.Keys;
+using Demo.ViewModels;
 using Prism.Ioc;
 using Prism.Unity;
 using Xamarin.Forms;
@@ -18,13 +19,14 @@ namespace Demo
         {
             Device.SetFlags(new string[] { "IndicatorView_Experimental", "CarouselView_Experimental" });
 
-            NavigationService.NavigateAsync(PageKeys.MainPage);
+            NavigationService.NavigateAsync(PageKeys.LauncherPage);
         }
         
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<LaucherPage,LauncherPageViewModel>();
         }
     }
 }

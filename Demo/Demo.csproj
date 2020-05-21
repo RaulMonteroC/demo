@@ -20,6 +20,7 @@
     <Folder Include="Fonts\" />
     <Folder Include="UI\" />
     <Folder Include="UI\Controls\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Fonts\JosefinSans-Regular.ttf" />
