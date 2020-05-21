@@ -151,6 +151,9 @@
     <BundleResource Include="Resources\AlpineLogo.png" />
     <BundleResource Include="Resources\AlpineLogo%402x.png" />
     <BundleResource Include="Resources\AlpineLogo%403x.png" />
+    <BundleResource Include="Resources\UnselectedFavoriteIcon.png" />
+    <BundleResource Include="Resources\UnselectedFavoriteIcon%402x.png" />
+    <BundleResource Include="Resources\UnselectedFavoriteIcon%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

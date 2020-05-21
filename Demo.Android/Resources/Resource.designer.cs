@@ -10332,7 +10332,10 @@ namespace Demo.Droid
 			public const int tooltip_frame_light = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int WhiteLocationIcon = 2131165305;
+			public const int UnselectedFavoriteIcon = 2131165305;
+			
+			// aapt resource value: 0x7F07007A
+			public const int WhiteLocationIcon = 2131165306;
 			
 			static Drawable()
 			{

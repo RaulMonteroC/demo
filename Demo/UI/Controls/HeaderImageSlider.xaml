@@ -9,12 +9,35 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-               Source="header" Aspect="AspectFit" VerticalOptions="Start"/>
+        <CarouselView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                      HeightRequest="300" HorizontalOptions="FillAndExpand"
+                      BackgroundColor="Blue" IndicatorView="{Reference indicatorView}"
+                      >
+
+            <CarouselView.ItemsSource>
+               <x:Array Type="{x:Type x:String}">
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                  </x:Array>                
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="header" Aspect="AspectFill" VerticalOptions="FillAndExpand" />
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView Grid.Row="0" Grid.Column="0" x:Name="indicatorView"
+                       IndicatorColor="White"
+                       SelectedIndicatorColor="Red"
+                       HorizontalOptions="Start"
+                       VerticalOptions="End"
+                       Margin="10,0,0,30"
+                       />
 
         <Image Grid.Row="0" Grid.Column="1" Source="MenuIcon"
                VerticalOptions="End" Margin="0,0,0,20"/>

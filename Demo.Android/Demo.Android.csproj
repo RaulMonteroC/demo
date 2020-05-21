@@ -107,7 +107,12 @@
     <AndroidResource Include="Resources\drawable-hdpi\AlpineLogo.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\AlpineLogo.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\AlpineLogo.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\AlpineLogo.png" />            
+    <AndroidResource Include="Resources\drawable-xxxhdpi\AlpineLogo.png" />    
+    <AndroidResource Include="Resources\drawable-mdpi\UnselectedFavoriteIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\UnselectedFavoriteIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\UnselectedFavoriteIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\UnselectedFavoriteIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\UnselectedFavoriteIcon.png" />            
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

@@ -9,7 +9,7 @@
              BackgroundColor="#262525">
 
 <NavigationPage.TitleView>
-    <Button Text="Test" HorizontalOptions="End" Margin="0,0,20,0"/>
+    <ImageButton BackgroundColor="Transparent" Source="UnselectedFavoriteIcon" HorizontalOptions="End" Margin="0,0,20,0"/>
 </NavigationPage.TitleView>
     
 <Grid>

@@ -16,6 +16,8 @@ namespace Demo
         
         protected override void OnInitialized()
         {
+            Device.SetFlags(new string[] { "IndicatorView_Experimental", "CarouselView_Experimental" });
+
             NavigationService.NavigateAsync(PageKeys.MainPage);
         }
         
