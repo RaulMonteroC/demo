@@ -21,6 +21,7 @@ namespace Demo
         
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterForNavigation<NavPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
         }
     }
