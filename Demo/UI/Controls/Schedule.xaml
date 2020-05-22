@@ -22,7 +22,7 @@
                FontSize="16" HorizontalOptions="End" VerticalOptions="Center"/>
 
         <Label Grid.Row="0" Grid.Column="1" Text="9AM-9:30PM" TextColor="#C9262B" FontFamily="JosefinSans"
-               FontSize="16" HorizontalOptions="End" VerticalOptions="Center" />
+               FontSize="15" HorizontalOptions="End" VerticalOptions="Center" />
 
         <Label Grid.Row="1" Grid.Column="0" Text="Sun:  " TextColor="White" FontFamily="Helvetica" FontSize="16" HorizontalOptions="End" />
         <Label Grid.Row="1" Grid.Column="1" Text="Closed" TextColor="White" FontFamily="JosefinSans"  FontSize="16" HorizontalOptions="End" VerticalOptions="Center"/>
