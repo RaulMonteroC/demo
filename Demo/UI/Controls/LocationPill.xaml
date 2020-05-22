@@ -1,17 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             VerticalOptions="Center"
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="Demo.UI.Controls.LocationPill">
 
-    <yummy:PancakeView BackgroundColor="#C9262B" CornerRadius="30" HeightRequest="30">
-        <StackLayout Orientation="Horizontal">
+    <Frame BackgroundColor="#C9262B" CornerRadius="21" Padding="0" >
+        <Grid Padding="5,6,2,2" VerticalOptions="CenterAndExpand" ColumnSpacing="0">
+          
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*"/>
+                <ColumnDefinition Width="7.5*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="WhiteLocationIcon" HorizontalOptions="End" VerticalOptions="End" Aspect="AspectFill"
+                   Margin="0" HeightRequest="35" WidthRequest="30" />
 
-            <Image Source="WhiteLocationIcon" Margin="10,0,0,0" VerticalOptions="Center" Aspect="AspectFit"/>
+            <Label x:Name="DistanceLabel" Grid.Column="1" Text="1.5 miles"
+                   FontFamily="JosefinSans" TextColor="White" Margin="{OnPlatform Android='0,-6,0,0'}"
+                   FontSize="{OnPlatform Android='22',iOS='23'}" VerticalOptions="CenterAndExpand"
+                   VerticalTextAlignment="Center" HorizontalOptions="Start"/>
 
-            <Label x:Name="DistanceLabel" Text="0 Miles" FontFamily="JosefinSansDarker" TextColor="White" Margin="0"
-                    VerticalOptions="Center" HorizontalOptions="Center"/>
-        </StackLayout>
-    </yummy:PancakeView>
+        </Grid>
+    </Frame>
 
 </ContentView>

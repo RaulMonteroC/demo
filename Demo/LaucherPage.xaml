@@ -4,7 +4,8 @@
              x:Class="Demo.LaucherPage"
              BackgroundColor="#262525">
     
-    <Button Text="Launch Demo"
+    <Button Text="LAUNCH DEMO"
+            Padding="10"
             TextColor="White"
             FontFamily="JosefinSans"
             BackgroundColor="#C9262B"

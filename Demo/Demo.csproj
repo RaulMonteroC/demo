@@ -26,10 +26,12 @@
     <None Remove="Fonts\JosefinSans-Regular.ttf" />
     <None Remove="Fonts\JosefinSans-SemiBold.ttf" />
     <None Remove="Fonts\JosefinSans-Light.ttf" />
+    <None Remove="Fonts\Helvetica 400.ttf" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Fonts\JosefinSans-Regular.ttf" />
     <EmbeddedResource Include="Fonts\JosefinSans-SemiBold.ttf" />
     <EmbeddedResource Include="Fonts\JosefinSans-Light.ttf" />
+    <EmbeddedResource Include="Fonts\Helvetica400.ttf" />
   </ItemGroup>
 </Project>

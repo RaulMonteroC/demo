@@ -14,15 +14,17 @@
         </Grid.ColumnDefinitions>
 
         <CarouselView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                      PeekAreaInsets="0"
                       HeightRequest="300" HorizontalOptions="FillAndExpand"
-                      BackgroundColor="Blue" IndicatorView="{Reference indicatorView}"
-                      >
-
+                      BackgroundColor="Transparent" IndicatorView="{Reference indicatorView}">
             <CarouselView.ItemsSource>
-               <x:Array Type="{x:Type x:String}">
+                <x:Array Type="{x:Type x:String}">
                     <x:String>1</x:String>
                     <x:String>2</x:String>
-                  </x:Array>                
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                </x:Array>
             </CarouselView.ItemsSource>
             <CarouselView.ItemTemplate>
                 <DataTemplate>
@@ -32,15 +34,21 @@
         </CarouselView>
 
         <IndicatorView Grid.Row="0" Grid.Column="0" x:Name="indicatorView"
-                       IndicatorColor="White"
+                       IndicatorColor="White" 
+                       IndicatorSize="8"                       
                        SelectedIndicatorColor="Red"
                        HorizontalOptions="Start"
                        VerticalOptions="End"
-                       Margin="10,0,0,30"
-                       />
+                       Margin="10,0,0,30">
+            <IndicatorView.IndicatorTemplate>
+                <DataTemplate>
+                    <BoxView HeightRequest="8" WidthRequest="8" CornerRadius="4"/>
+                </DataTemplate>
+            </IndicatorView.IndicatorTemplate>
+        </IndicatorView>
 
-        <Image Grid.Row="0" Grid.Column="1" Source="MenuIcon"
-               VerticalOptions="End" Margin="0,0,0,20"/>
+        <Image Grid.Row="0" Grid.Column="1" Source="MenuIcon" HeightRequest="50" Aspect="AspectFill"
+               VerticalOptions="End" Margin="0,0,18,20"/>
     </Grid>
 
 </ContentView>

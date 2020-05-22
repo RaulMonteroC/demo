@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Demo.UI.Controls.Schedule">
 
-    <Grid RowSpacing="0">
+    <Grid RowSpacing="{OnPlatform Android=0,iOS=5}" ColumnSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -18,26 +18,29 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0" Text="Sat:" TextColor="#C9262B" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
-        <Label Grid.Row="0" Grid.Column="1" Text="9AM-9:30PM" TextColor="#C9262B" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
+        <Label Grid.Row="0" Grid.Column="0" Text="Sat:  " TextColor="#C9262B" FontFamily="Helvetica"
+               FontSize="16" HorizontalOptions="End" VerticalOptions="Center"/>
 
-        <Label Grid.Row="1" Grid.Column="0" Text="Sun:" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
-        <Label Grid.Row="1" Grid.Column="1" Text="Closed" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
+        <Label Grid.Row="0" Grid.Column="1" Text="9AM-9:30PM" TextColor="#C9262B" FontFamily="JosefinSans"
+               FontSize="16" HorizontalOptions="End" VerticalOptions="Center" />
 
-        <Label Grid.Row="2" Grid.Column="0" Text="Mon:" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
-        <Label Grid.Row="2" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
+        <Label Grid.Row="1" Grid.Column="0" Text="Sun:  " TextColor="White" FontFamily="Helvetica" FontSize="16" HorizontalOptions="End" />
+        <Label Grid.Row="1" Grid.Column="1" Text="Closed" TextColor="White" FontFamily="JosefinSans"  FontSize="16" HorizontalOptions="End" VerticalOptions="Center"/>
 
-        <Label Grid.Row="3" Grid.Column="0" Text="Tue:" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
-        <Label Grid.Row="3" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
+        <Label Grid.Row="2" Grid.Column="0" Text="Mon:  " TextColor="White" FontFamily="Helvetica" FontSize="16" HorizontalOptions="End" />
+        <Label Grid.Row="2" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontFamily="JosefinSans"  FontSize="16" HorizontalOptions="End" VerticalOptions="Center"/>
 
-        <Label Grid.Row="4" Grid.Column="0" Text="Wed:" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
-        <Label Grid.Row="4" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
+        <Label Grid.Row="3" Grid.Column="0" Text="Tue:  " TextColor="White" FontFamily="Helvetica" FontSize="16" HorizontalOptions="End" />
+        <Label Grid.Row="3" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontFamily="JosefinSans"  FontSize="16" HorizontalOptions="End" VerticalOptions="Center"/>
 
-        <Label Grid.Row="5" Grid.Column="0" Text="Thu:" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
-        <Label Grid.Row="5" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
+        <Label Grid.Row="4" Grid.Column="0" Text="Wed:  " TextColor="White" FontFamily="Helvetica" FontSize="16" HorizontalOptions="End" />
+        <Label Grid.Row="4" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontFamily="JosefinSans"  FontSize="16" HorizontalOptions="End" VerticalOptions="Center"/>
 
-        <Label Grid.Row="6" Grid.Column="0" Text="Fri:" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
-        <Label Grid.Row="6" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontFamily="JosefinSans" FontSize="Caption" HorizontalOptions="End" />
+        <Label Grid.Row="5" Grid.Column="0" Text="Thu:  " TextColor="White" FontFamily="Helvetica" FontSize="16" HorizontalOptions="End" />
+        <Label Grid.Row="5" Grid.Column="1" Text="9AM-9PM" TextColor="White" FontFamily="JosefinSans"  FontSize="16" HorizontalOptions="End" VerticalOptions="Center"/>
+
+        <Label Grid.Row="6" Grid.Column="0" Text="Fri:  " TextColor="White" FontFamily="Helvetica" FontSize="Small" HorizontalOptions="End" />
+        <Label Grid.Row="6" Grid.Column="1" Text="9AM-9:30PM" TextColor="White" FontFamily="JosefinSans"  FontSize="15" HorizontalOptions="End" VerticalOptions="Center"/>
     </Grid>
 
 </ContentView>

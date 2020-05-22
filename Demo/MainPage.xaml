@@ -6,73 +6,76 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"             
              xmlns:controls="clr-namespace:Demo.UI.Controls"
              mc:Ignorable="d" x:Class="Demo.MainPage"
+            
              BackgroundColor="#262525">
 
-<NavigationPage.TitleView>
-    <ImageButton BackgroundColor="Transparent" Source="UnselectedFavoriteIcon" HorizontalOptions="End" Margin="0,0,20,0"/>
-</NavigationPage.TitleView>
-    
-<Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
-        <RowDefinition Height="Auto" />
-    </Grid.RowDefinitions>
+    <NavigationPage.TitleView>
 
-    <!--Header-->
-    <controls:HeaderImageSlider Grid.Row="0"/>
+        <ImageButton BackgroundColor="Transparent" Source="UnselectedFavoriteIcon"
+                  HorizontalOptions="End" Margin="{OnPlatform Android='0,0,20,0',iOS='0,0,10,0'}"/>
 
-    <!--Content-->
-    <Grid Grid.Row="1" Margin="10,0">
+    </NavigationPage.TitleView>
+
+    <Grid RowSpacing="20" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>        
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*" />
-            <ColumnDefinition Width="3*" />
-        </Grid.ColumnDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-        <!--Column 1-->
-        <Grid Grid.Column="0" ColumnSpacing="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+        <!--Header-->
+        <controls:HeaderImageSlider Grid.Row="0"/>
+
+        <!--Content-->
+        <Grid Grid.Row="1" Padding="10,0">
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="6*" />
                 <ColumnDefinition Width="4*" />
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Alphine Steakhouse" FontFamily="JosefinSans"
+            <!--Column 1-->
+            <Grid Grid.Column="0" ColumnSpacing="0"  RowSpacing="{OnPlatform Android=0,iOS=15}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6.5*" />
+                    <ColumnDefinition Width="3.5*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Alphine Steakhouse" FontFamily="Helvetica"
                    FontSize="Title" TextColor="White"/>
 
-            <Label Grid.Row="1" Grid.ColumnSpan="2" Text="Meats • Deli • Sandwiches" FontFamily="JosefinSansLight"
-                   FontSize="Subtitle" TextColor="White"/>
+                <Label Grid.Row="1" Grid.ColumnSpan="2" Text="Meats • Deli • Sandwiches" FontFamily="JosefinSansDarker"
+                   FontSize="Medium" TextColor="White"/>
 
-            <controls:LocationPill Grid.Row="2" Distance="1.5 Miles" Margin="0,15"/>
+                <controls:LocationPill Grid.Row="2" Distance="1.5 Miles" Margin="0,15"/>
 
-            <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Spacing="0">
-                <Label Text="4520 S. Ramiami Trail" FontFamily="JosefinSansLight" FontSize="Medium" TextColor="White"/>
-                <Label Text="Sarasota, FL 34231" FontFamily="JosefinSansLight" FontSize="Medium" TextColor="White"/>
-            </StackLayout>
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="2" VerticalOptions="End" Spacing="{OnPlatform Android=0,iOS=7}">
+                    <Label Text="4520 S. Ramiami Trail" FontFamily="JosefinSansLight" FontSize="20" TextColor="White"/>
+                    <Label Text="Sarasota, FL 34231" FontFamily="JosefinSansLight" FontSize="23" TextColor="White"/>
+                </StackLayout>
+            </Grid>
+
+            <!--Column 2-->
+            <Grid Grid.Column="1" RowSpacing="20" Padding="0"
+                  HorizontalOptions="End" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <controls:Schedule Grid.Row="0"/>
+
+                <Image Grid.Row="1" Source="AlpineLogo" VerticalOptions="End" HorizontalOptions="End" Aspect="AspectFit"  />
+
+            </Grid>
+
         </Grid>
 
-        <!--Column 2-->
-        <Grid Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="0,8,0,0" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-
-            <controls:Schedule Grid.Row="0"/>
-
-            <Image Grid.Row="1" Source="AlpineLogo" Margin="0,10" />
-
-        </Grid>
-        
     </Grid>
-
-</Grid>
 
 </ContentPage>
